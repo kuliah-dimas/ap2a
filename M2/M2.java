@@ -2,29 +2,6 @@ import java.util.Scanner;
 
 public class M2 {
 
-    // public static void act() {
-    // Scanner scanner = new Scanner(System.in);
-
-    // System.out.print("Input grade: ");
-    // int grade = scanner.nextInt();
-
-    // if (grade >= 90) {
-    // if (grade > 100) {
-    // System.out.println("Can't more than 100");
-    // return;
-    // }
-    // System.out.println("Grade A");
-    // } else if (grade >= 80) {
-    // System.out.println("Grade B");
-    // } else if (grade >= 70) {
-    // System.out.println("Grade C");
-    // } else if (grade >= 60) {
-    // System.out.println("Grade D");
-    // } else if (grade >= 0) {
-    // System.out.println("NGULANG AJA BRO!");
-    // }
-    // }
-
     public static double checkDiscount(int harga, int qty) {
         double hargaD = harga * qty;
 
