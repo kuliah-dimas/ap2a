@@ -35,7 +35,7 @@ public class NO4 {
                     break;
                 case "3":
                     System.out.println("thank you for being mine.");
-                    break;
+                    return;
                 default:
                     System.out.println("Pilihan tidak ada");
             }
