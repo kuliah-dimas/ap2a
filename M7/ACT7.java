@@ -1,31 +1,32 @@
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 public class ACT7 {
     public static void main(String[] args) {
-        MyFile filekuMyFile = new MyFile();
+        // DEKLARASI OBJEK
+        MyFile fileKu = new MyFile();
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Nama file mau apa?: ");
+        // INPUT NAMA FILE
+        System.out.print("Nama filenya mau apa? ");
         String namaFile = input.nextLine();
 
-        String path = "./fileku";
+        // PATH FILE
+        String path = "./";
         File f = new File(path, namaFile);
 
-        filekuMyFile.MakeFile(f);
+        // MEMANGGIL OBJEK UNTUK MEMBUAT FILE
+        fileKu.MakeFile(f);
 
+        // LOOPING ISI FILE
         boolean jalan = true;
         while (jalan) {
-            System.out.print("Masukkan isi text: ");
+            System.out.print("\nMasukkan Isi Text : ");
             String isi = input.nextLine();
+            // MEMANGGIL OBJEK UNTUK MENULIS FILE
+            fileKu.WriteFile(f, isi);
 
-            filekuMyFile.WriteFile(f, isi);
-
-            System.out.print("Mau nambah text? (y/n): ");
+            System.out.print("Mau nambah text? (y/n) : ");
             String pilihan = input.nextLine();
 
             if (pilihan.equalsIgnoreCase("n")) {
@@ -33,6 +34,9 @@ public class ACT7 {
                 break;
             }
         }
+
+        // MEMANGGIL OBJEK UNTUK MEMBACA FILE
+        fileKu.ReadFile(f);
     }
 }
 
@@ -40,8 +44,8 @@ class MyFile {
     public void MakeFile(File f) {
         try {
             f.createNewFile();
-        } catch (IOException e) {
-            System.out.println("Gagal membuat: " + e.getMessage());
+        } catch (IOException err) {
+            System.err.println("Gagal membuat : " + err.getMessage());
         }
     }
 
@@ -50,8 +54,8 @@ class MyFile {
             FileWriter tulis = new FileWriter(f, true);
             tulis.write(isi + "\n");
             tulis.close();
-        } catch (Exception e) {
-            System.out.println("Gagal menulis: " + e.getMessage());
+        } catch (IOException err) {
+            System.err.println("Gagal menulis : " + err.getMessage());
         }
     }
 
@@ -65,8 +69,8 @@ class MyFile {
             }
 
             baca.close();
-        } catch (Exception e) {
-            System.out.println("Gagal membaca:" + e.getMessage());
+        } catch (IOException err) {
+            System.err.println("Gagal membaca : " + err.getMessage());
         }
     }
 }
