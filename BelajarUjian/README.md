@@ -40,16 +40,6 @@
 *****
 ```
 
-- SegitigaSiku.java
-
-```
-*
-**
-***
-****
-*****
-```
-
 - SegitigaSikuKebalik.java
 
 ```
