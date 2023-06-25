@@ -20,6 +20,16 @@
 *
 ```
 
+- SegitigaFiveToOneKebalik.java
+
+```
+*****
+ ****
+  ***
+   **
+    *
+```
+
 - SegitigaSamaSisi.java
 
 ```
