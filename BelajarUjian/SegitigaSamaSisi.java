@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class SegitigaSikuKebalik {
+public class SegitigaSamaSisi {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -10,7 +10,7 @@ public class SegitigaSikuKebalik {
 
         for (int i = 1; i <= tinggi; i++) {
             for (int j = 1; j <= tinggi - i; j++) {
-                System.out.print("  ");
+                System.out.print(" ");
             }
             for (int k = 1; k <= i; k++) {
                 System.out.print("* ");
